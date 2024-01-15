@@ -9,7 +9,7 @@ else
 fi
 
 # Install dependencies
-cd /workspaces/wordpress-develop
+cd /workspaces/wordpress-development
 npm install && npm run build:dev
 
 # Install WordPress and activate the plugin/theme.
