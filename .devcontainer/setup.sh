@@ -12,6 +12,11 @@ fi
 cd /workspaces/wordpress-development
 npm install && npm run build:dev
 
+# Config ENV
+sudo sed -i -r "s@.*LOCAL_WP_HOME.*@LOCAL_WP_HOME=https://${CODESPACE_NAME}-8889.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}@" /workspaces/wordpress-development/.env
+sudo sed -i -r "s@.*LOCAL_WP_SITEURL.*@LOCAL_WP_SITEURL=https://${CODESPACE_NAME}-8889.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}@" /workspaces/wordpress-development/.env
+
+
 # Install WordPress and activate the plugin/theme.
 cd /var/www/html
 echo "Setting up WordPress at $SITE_HOST"
