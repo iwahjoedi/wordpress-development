@@ -12,16 +12,19 @@ services:
       - wpdevnet
 
     ports:
+      #- 8889:443
       - 8888:80
-      #- ${LOCAL_PORT}:80
+      - ${LOCAL_PORT}:443
 
     environment:
       LOCAL_DIR: ${LOCAL_DIR-src}
 
     volumes:
       - ./tools/local-env/default.template:/etc/nginx/conf.d/default.template
-      - ./tools/local-env/ssl/wordpressdev.crt:/etc/nginx/wordpressdev.crt
-      - ./tools/local-env/ssl/wordpressdev.key:/etc/nginx/wordpressdev.key
+      - ./tools/local-env/ssl/client.pem:/etc/nginx/client.pem
+      - ./tools/local-env/ssl/client.key:/etc/nginx/client.key
+      - ./tools/local-env/ssl/dhparam.pem:/etc/nginx/dhparam.pem
+      - ./tools/local-env/ssl-params.conf:/etc/nginx/ssl-params.conf
       - ./:/var/www
 
     # Load our config file, substituting environment variables into the config.
