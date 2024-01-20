@@ -17,7 +17,7 @@ wp_cli( `config set WP_DEBUG_DISPLAY ${process.env.LOCAL_WP_DEBUG_DISPLAY} --raw
 wp_cli( `config set SCRIPT_DEBUG ${process.env.LOCAL_SCRIPT_DEBUG} --raw --type=constant` );
 wp_cli( `config set WP_ENVIRONMENT_TYPE ${process.env.LOCAL_WP_ENVIRONMENT_TYPE} --type=constant` );
 wp_cli( `config set WP_DEVELOPMENT_MODE ${process.env.LOCAL_WP_DEVELOPMENT_MODE} --type=constant` );
-// wp_cli( `config set WP_HOME ${process.env.LOCAL_WP_HOME} --type=constant` );
+wp_cli( `config set WP_HOME ${process.env.LOCAL_WP_HOME} --type=constant` );
 
 
 

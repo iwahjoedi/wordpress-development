@@ -5,6 +5,8 @@ server {
 	listen [::]:80 default_server;
 
 	server_name localhost;
+	ssl_certificate     wordpressdev.crt;
+    ssl_certificate_key wordpressdev.key;
 
 	client_max_body_size 1g;
 

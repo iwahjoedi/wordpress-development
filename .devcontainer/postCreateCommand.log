@@ -1,5 +1,5 @@
 
-up to date, audited 2744 packages in 19s
+added 2743 packages, and audited 2744 packages in 3m
 
 291 packages are looking for funding
   run `npm fund` for details
@@ -152,5 +152,5 @@ Running "usebanner:files" (usebanner) task
 √ grunt-banner completed successfully
 
 Done.
-Setting up WordPress at https://didactic-umbrella-qw74x4x9r34gxg-8080.app.github.dev
+Setting up WordPress at https://ubiquitous-succotash-jpqj4p4645hqvq7-8080.app.github.dev
 Success: WordPress installed successfully.

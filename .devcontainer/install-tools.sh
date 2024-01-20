@@ -13,3 +13,6 @@ sudo apt-get -y install --no-install-recommends chromium
 
 # Copy the welcome message
 sudo cp .devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt
+
+# openssl req -x509 -newkey rsa:4096 -keyout <hostname>.key -out <hostname>.crt -sha256 -days 3650 -nodes -subj "/C=...ST=.../L=.../O=.../OU=.../CN=..."
+openssl req -x509 -newkey rsa:4096 -trustout -keyout tools/ssl/wordpressdev.key -out tools/ssl/wordpressdev.crt -sha256 -days 3650 -nodes -subj "/CN=Githubdev Root CA/C=AT/ST=Ijoe/L=Ijoe/O=Tathir"
