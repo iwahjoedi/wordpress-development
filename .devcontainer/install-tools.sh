@@ -25,7 +25,7 @@ sudo cp .devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/f
 #openssl x509 -trustout -signkey tools/local-env/ssl/client.key -days 365 -req -in tools/local-env/ssl/client.csr -out tools/local-env/ssl/client.pem
 
 
-openssl ca -in tools/local-env/ssl/ca.csr -out ca.pem -config tools/local-env/openssl.cnf -selfsign -extfile ca.ext -days 1095
-openssl x509 -trustout -signkey tools/local-env/ssl/ca.key -days 365 -req -in tools/local-env/ssl/ca.csr -out tools/local-env/ssl/ca.pem
+#openssl ca -in tools/local-env/ssl/ca.csr -out ca.pem -config tools/local-env/openssl.cnf -selfsign -extfile ca.ext -days 1095
+#openssl x509 -trustout -signkey tools/local-env/ssl/ca.key -days 365 -req -in tools/local-env/ssl/ca.csr -out tools/local-env/ssl/ca.pem
 
-openssl ocsp -issuer tools/local-env/ssl/ca.pem -cert tools/local-env/ssl/ca.pem -text -url http://app.github.dev
+#openssl ocsp -issuer tools/local-env/ssl/ca.pem -cert tools/local-env/ssl/ca.pem -text -url http://app.github.dev
