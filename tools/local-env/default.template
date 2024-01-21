@@ -4,12 +4,12 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	#listen 443 ssl default_server;
-    #listen [::]:443 ssl default_server;
+	listen 443 ssl default_server;
+    listen [::]:443 ssl default_server;
 
 	server_name localhost;
 
-	return 301 https://$server_name$request_uri;
+	#return 301 https://$server_name$request_uri;
 
 	include ssl-params.conf;
 
@@ -18,7 +18,8 @@ server {
 	error_log  /var/log/nginx/error.log;
 	access_log /var/log/nginx/access.log;
 
-	root /var/www/${LOCAL_DIR};
+	#root /var/www/${LOCAL_DIR};
+	root     /var/www/src;
 
 	absolute_redirect off;
 
@@ -33,6 +34,7 @@ server {
 		fastcgi_index index.php;
 		include fastcgi_params;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		#fastcgi_param SCRIPT_FILENAME /var/www/trivial$fastcgi_script_name;
 		fastcgi_param PATH_INFO $fastcgi_path_info;
 		fastcgi_pass_header Authorization;
 	}

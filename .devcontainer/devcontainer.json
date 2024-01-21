@@ -20,6 +20,7 @@
     "postCreateCommand": "sudo chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh > .devcontainer/postCreateCommand.log",
     "forwardPorts": [
         8080,
+        5555,
         8888,
         8889
     ],
