@@ -19,6 +19,7 @@
     "onCreateCommand": "sudo chmod +x .devcontainer/install-tools.sh && .devcontainer/install-tools.sh > .devcontainer/onCreateCommand.log",
     "postCreateCommand": "sudo chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh > .devcontainer/postCreateCommand.log",
     "forwardPorts": [
+        443,
         8080,
         5555,
         8888,

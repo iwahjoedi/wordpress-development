@@ -11,9 +11,10 @@ services:
       - wpdevnet
 
     ports:
-      #- 8889:443
+      - 8889:443
       - 8888:80
-      - ${LOCAL_PORT}:443
+      - 443:443
+      #- ${LOCAL_PORT}:443
 
     environment:
       LOCAL_DIR: ${LOCAL_DIR-src}

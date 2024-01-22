@@ -40,7 +40,7 @@ writeFileSync( 'wp-tests-config.php', testConfig );
 wait_on( { resources: [ `tcp:localhost:${process.env.LOCAL_PORT}`] } )
 	.then( () => {
 		wp_cli( 'db reset --yes' );
-		wp_cli( `core install --title="WordPress Develop" --admin_user=admin --admin_password=password --admin_email=test@test.com --skip-email --url=http://localhost:${process.env.LOCAL_PORT}` );
+		wp_cli( `core install --title="WordPress Develop" --admin_user=admin --admin_password=password --admin_email=test@test.com --skip-email --url=http://localhost` );
 	} );
 
 /**
